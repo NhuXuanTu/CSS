@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/*
+Thuộc tính transition
+- transition-property: value (xác định kiểu chuyển động)
++ none: không có transition
++ all: tất cả các kiểu chuyển động
++ width: chuyển động thay đổi chiều rộng
++ height: chuyển động thay đổi chiều cao
++ có thể kết hợp các giá trị với cú pháp sau: width, height (cách nhau bởi dấu phẩy)
+- transition-duration: value + unit (quá trình chuyển đổi mất bao nhiêu thời gian)
++ value: số nguyên, thực (dương)
++ unit: s, ms
+- transition-timing-function:  xác định hiệu ứng chuyển động như thế nào
++ ease: chuyển động: chậm-nhanh-chậm
++ ease-in: chuyển động: chậm-nhanh
++ ease-out: chuyển động: nhanh-chậm
++ ease-in-out: chuyển động: chậm-nhanh-chậm( giống ease)
++ linear: chuyển động đều trong suốt quá trình
++ cubic-bezier(value1, value2, value3, value4): Xác định tốc độ quá trình chuyển động theo mốc
+lưu ý:
+- value: nhận các giá trị từ 0 đến 1
+- giá trị càng cao => chuyển động càng chậm
+
+- transtion-delay: value+unit
++ value: số nguyên, thực(dương)
++ unit: s,ms;
+
+- transition: property duration function delay( tuy nhiên nên tách phần property ra riêng)
+*/
+.box{
+    background: green;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    box-shadow: 0px 0px 0 5px red;
+    /* transition-property: width, height;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 1s; */
+    transition: 1s linear;
+    transition-property: all;
+}
+.box:hover{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+    padding-top: 30px;
+    color: brown;
+}

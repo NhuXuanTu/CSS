@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  outline: none;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  border: 1px solid blue;
+  height: 600px;
+  flex-direction: row; /* thay đổi hướng sắp xếp các phần tử trong khối */
+  flex-wrap: nowrap; /* khi các phần tử bên trong vượt quá kích thước của khối nó sẽ thu nhỏ và xuống dòng */
+  justify-content: flex-start; /* căn chỉnh các phần tử theo chiều ngang */
+  align-items: center; /* căn chỉnh các phần tử theo chiều dọc */
+  /* 
+    justify-content, align-items và align-content có thể chỉnh theo chiều dọc hoặc ngang tùy thuộc vào flex-direction là row hay column
+    justify-content, align-items: căn đều các phần tử
+    */
+  align-content: stretch; /* căn theo chiều dọc giống align-items nhưng áp dụng với nhiều hàng
+                                    di chuyển cả khối phần tử theo chiều dọc */
+}
+.item {
+  background: green;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 30px;
+  border: 1px solid red;
+  flex-grow: 1; /* flex-grow: dãn phần tử nếu không gian khối còn thừa (giá trị mặc định bằng 0) */
+  flex-shrink: 1; /* flex-shrink: co phần tử khi không gian khối bị thiếu (giá trị mặc định bằng 1) */
+}
+.item:nth-child(2) {
+  font-size: 50px;
+  align-self: baseline;
+  order: 1; /* order để sắp xếp thứ tự các phần tử trong khối*/
+}
+.item:nth-child(3) {
+  font-size: 20px;
+  align-self: baseline;
+  order: 2;
+}
+.item:nth-child(4) {
+  font-size: 20px;
+  align-self: baseline;
+  order: 3;
+}
+.item:nth-child(5) {
+  font-size: 20px;
+  align-self: baseline;
+  order: 4;
+}
+.item:nth-child(1) {
+  font-size: 20px;
+  align-self: baseline;
+  order: 5;
+}

@@ -1,0 +1,37 @@
+/* command 
+*/
+@font-face { /* nhúng font-family bằng cách tải file về*/
+    font-family:'Commissioner regular';
+    src: url(Commissioner-Regular.ttf);
+}
+html{
+    font-size: 30px;
+}
+body{
+    color: green;
+    font-size: 30px;
+}
+.content{
+    color: red;
+    font-size: 50px;
+}
+p{
+    /* thay đổi màu sắc văn bản*/
+    color: inherit;/*tên màu, mã màu(hex), rgb, initial: màu mặc định của trình duyệt, 
+    inherit: chịu tác động của thành phần cha(p ảnh hưởng bởi class content) */
+    font-size: 120%; /* =100% = 1em */
+    /*đơn vị
+    - tuyệt đối: px, pt; 1px = 1pixel
+    - tương đối: %,em,rem; (%,em phụ thuộc vào thành phần cha(content); 
+    rem phụ thuộc kích thuộc mặc định của trình duyệt(html))
+    */
+    font-family: "Commissioner", sans-serif; /* font chữ */
+    font-style: italic; /* kiểu chữ: in nghiêm, đậm,... */
+    font-weight: normal; /* độ dày chữ */
+    letter-spacing: 5px;/* khoảng cách giữa các kí tự */
+    line-height: 1.2 ; /* độ cao 1 dòng 1.2*font-size */
+    text-decoration: line-through; /* gạch trên dưới giữa của text */
+    word-spacing: 5px; /* khoảng cách giữa các từ */
+    text-indent: 30px; /* lùi đầu dòng */
+    text-transform: uppercase; /* viết in hoa, viết in thường, viết hoa chữ cái đầu của từ */
+}

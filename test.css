@@ -1,0 +1,7 @@
+.box {
+    width: 200px;
+    height: 100px;
+    background: orange;
+    margin: 200px;
+    transform: skew(0deg, 0deg); /* nghiêng theo cả X và Y */
+  }

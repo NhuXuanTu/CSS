@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+:root{
+    --container-width: 1200px;
+    --column-padding: 10px;
+}
+/* thiết lập container: Khung chứa chính, giới hạn chiều rộng */
+.container{
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+/* thiết lập row: Dùng để chứa các cột (.col) */
+.row{
+   margin-left: calc( 0px - var(--column-padding));
+   margin-right: calc( 0px - var(--column-padding));
+}
+.row::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* col: Chia lưới theo tỉ lệ phần trăm */
+.col{
+    float: left ;
+    padding: 0 var(--column-padding);
+}
+/* item: thường dùng để style riêng cho từng phần tử bên trong .col */
+.item{
+    background: green;
+    border: 1px solid red;
+}
+/* 
+công thức tính phần trăm theo col-{number}
+width= number/12*100%
+*/
+.col-1{
+    width: calc(1/12*100%);
+}
+.col-2{
+    width: calc(2/12*100%);
+}
+.col-3{
+    width: calc(3/12*100%);
+}
+.col-4{
+    width: calc(4/12*100%);
+}
+.col-5{
+    width: calc(5/12*100%);
+}
+.col-6{
+    width: calc(6/12*100%);
+}
+.col-7{
+    width: calc(7/12*100%);
+}
+.col-8{
+    width: calc(8/12*100%);
+}
+.col-9{
+    width: calc(9/12*100%);
+}
+.col-10{
+    width: calc(10/12*100%);
+}
+.col-11{
+    width: calc(11/12*100%);
+}
+.col-3{
+    width:100%;
+}
+

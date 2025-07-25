@@ -1,0 +1,99 @@
+/*
+Thuộc tính transform CSS3 là gì?
+- Thuộc tính này giúp biến đổi các thành phần trang web
+- Các biến đổi trong transform: xoay, nghiêng, di chuyển, phóng to
+
+Các giá trị của transform
+
+1. none: không có sự biến đổi( đây là giá trị mặc định)
+
+2. rotate(angle): xoay thành phần theo góc (angle) xác định
+
+3. rotateX (angle): xoay thành phần quanh trục X
+
+4. rotateY (angle): xoay thành phần quanh trục Y
+
+5. rotateZ (angle):  xoay thành phần quanh trục Z( giống vs rotate)
+
+6. scale(x,y): phóng to thành phần theo tỉ lệ x,y (nếu nhận 1 giá trị thì tính cả 2 chiều; nếu giá trị âm thì xoay ngược lại)
+
+7. scaleX(x): phóng to thành phần theo chiều ngang vs tỉ lệ x
+
+8. scaleY(y): phóng to thành phần theo chiều ngang vs tỉ lệ y
+
+9. skew(angle_x,angle_y): nghiêng thành phần theo trục X,Y
+
+10.skewX(angle): nghiêng thành phần theo trục X ( giá trị dương cạnh dưới nghiêng sang phải, âm ngược lại)
+
+11.skewY(angle): nghiêng thành phần theo trục Y ( giá trị dương cạnh phải nghiêng xuống dưới, âm ngược lại)
+
+12. translate(x,y): di chuyển thành phần theo trục X, Y với khoảng cách x,y
+
+13. translateX(x): di chuyển thành phần theo trục X vs khoảng cách x
+
+14. translateY(y): di chuyển thành phần theo trục Y vs khoảng cách y
+*/
+
+/*
+Thuộc tính transform-origin: dùng để xác định điểm gốc ( điểm làm tâm) cho các phép biến đổi như scale, rotate, translate
+
+Cú pháp: transform-origin: x y
+
+trong đó:
+- x nhận các giá trị: left, center, right, độ dài cụ thể
+- y nhận các giá trị: top, center, bottom, độ dài cụ thể
+*/
+
+/*
+- Phân biệt transform translate và margin:
++ margin: khi di chuyển thành phần, các thành phần liên quan( thành phần cha và các phần tử xung quanh) sẽ bị tác động
++ translate: khi di chuyển thành phần, các thành phần liên quan( thành phần cha và các phần tử xung quanh) sẽ không bị tác động
+
+- Phân biệt transform translate vs position relative:
++ chỉ khác nhau khi di chuyển bằng đơn vị tương đối(%)
++ với position relative: nếu sử dụng đơn vị tương đối(%) => tính theo wight, height của thành phần cha
++ với transition translate: nếu sử dụng đơn vị tương đối(%) => tính theo wight, height của thành phần sử dụng translate
+
+*/
+
+.container{
+width: 1000px;
+margin: 0 auto;
+}
+.wrapper{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.block{
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    background: green;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.4s linear;
+}
+
+.wrapper:hover .block{
+    /* transform: rotate(30deg); deg = độ; giá trị dương thì xoay theo chiều kim đồng hồ, âm thì ngược lại */
+    /* transform: rotateX(30deg) ; */
+    /* transform: rotateY(30 deg); */
+    /* transform: scale(1.2, 1.5); */
+    /* transform: skew(30deg, 30deg); */
+    /* transform: translate(0px, 20px); */
+    transform-origin: center center;
+    /* margin-top: 350px; */
+    position: relative;
+    top: 50%;
+}
+
+.element{
+    background: blueviolet;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}

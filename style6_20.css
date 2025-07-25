@@ -1,0 +1,236 @@
+/* Thuộc tính background
+
+- background-color: Set màu nền
+- background-image: Set hình nền
+- background-repeat: Set độ lập hình nền
+- background-size: Set kích thước cho hình nền
+- background-attachment: Set chế độ hình nền khi cuộn trang (Scroll)
+- background-position: Set vị trí cho hình nền
+- background: color image repeat attachment position
+
+Giá trị mặc định: inherit, initial
+*/
+
+/* 
+Reset CSS
+- Reset CSS: là công việc đặt các giá trị mặc định cho các thẻ HTML
+- Reset CSS: là công việc rất quan trọng khi làm các dự án Front-end
+- Reset CSS đặt ở đầu file CSS
+*/
+/* Reset CSS start */
+*{
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+/* ul, ol{
+    list-style: none;
+}   */
+/* Reset CSS end */
+.english ul{
+    margin-bottom:  15px;
+    list-style: disc;
+}
+.english p{
+    margin-bottom: 15px;
+}
+
+.block{
+    background-color: #dc0b0b3a;
+    color:black:
+}
+
+html{
+    height: 2000px;
+}
+
+body{
+    /* background-image: url('../image/hn1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; background-size: width height */
+    /* cover: width:100% height=auto */
+    /* contain: width: auto height=100% */
+    /* background-attachment: fixed;
+    background-position: 50% 50%; background: x y */
+    /* 
+    x: left center right length;
+    y: top center bottom length;
+    */
+   
+    background: green url('image/hn2.jpg') no-repeat  fixed  center/cover;
+
+}
+.social{
+    width: 800px;
+    height: 800px;
+    border: 1px solid red;
+    margin: 0 auto;
+    list-style:inside;
+    list-style-type: none;
+    line-height: 10px;
+}
+
+.social .facebook a{
+    background-image: url('image/Facebook_Logo_\(2019\).png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 40px;
+}
+.social .youtube a{
+    background-image: url('image/Youtube_logo.png');
+    background-repeat: no-repeat;
+    background-position: left center ;
+    background-size: contain;
+    padding-left: 40px;
+}
+img{
+    display: block;
+    width: 400px;
+    height: auto;
+    border: 1px solid;
+    margin: 0 auto;
+}
+.block{
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    box-sizing: border-box;
+    text-align: center;
+}
+a .youtube-btn{
+    display: block;
+    margin: 0 auto;
+    background-color: aquamarine;
+    border: none;
+}
+.english{
+    width: 600px;
+    border: 1px solid red;
+    /* overflow:scroll; nội dung có thể cuộn ngang dọc trong 1 phạm vi giới hạn */
+    opacity: 1; /* làm mờ phần nội dung đc chọn */
+    padding: 20px 20px;
+    /* thuộc tính padding: căn chỉnh khoảng cách giữa nội dung và border
+    padding: top right bottom left
+    padding: top_bottom left_right
+    padding: top left_right bottom
+    padding: top_bottom_left_right */
+    margin: 0 auto;
+    /* thuộc tính margin: căn chỉnh khoảng cách giữa các phần tử trong trang web
+    margin: top right bottom left
+    margin: top_bottom left_right
+    margin: top left_right bottom
+    margin: top_bottom_left_right */
+    box-sizing: border-box; /* width tính cả kích thước của border */
+}
+
+.wrapper{
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid red;
+    /* overflow: auto; */
+    clear: both;
+    /*
+    Thuộc tính clear và kĩ thuật clearfix
+    - Thuộc tính clear dùng để khắc chế tình trạng tự động trôi của phần tử 
+    với các thành phần dùng float trước nó
+    - Các giá trị của clear: left, right, both( ngăn ko cho phép trôi về bên nào), inherit, initial
+    - Kĩ thuật clearfix:
+    + Đây không phải thuộc tính của CSS
+    + Đây là kĩ thuật áp dụng các thuộc tính của CSS để điều chỉnh không gian 
+    của thẻ cha khi các thể con sử dụng float (áp dụng trong việc xây dựng layout)
+    */
+}
+.wrapper::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.wrapper .col-1{
+    background-color: green;
+    width: 30%;
+    height: 100px;
+    float: left;
+    /*
+    Thuộc tính float 
+    - Thuộc tính float dùng đểdi chuyển các phần tử sang trái hoặc phải 
+    trong không gian phần tử bao quanh nó
+    - các giá trị: left, right, none, inherit (kế thừa giá trị float của thẻ cha), 
+    initial (kế thừa giá trị mặc định ban đầu)
+    */
+}
+.wrapper .col-2{
+    background-color: rgb(223, 93, 18);
+    width: 40%;
+    height: 150px;
+    float: right;
+}
+/* .wrapper .col-3{
+    background-color: brown;
+    width: 30%;
+    height: 50px;
+    float: left; 
+} */
+/* .wrapper .col-1-1{
+    background-color: rgb(65, 231, 65);
+    width: auto;
+    height: 50px;
+    font-size: 80%;
+}
+
+.wrapper .col-1-2{
+    background-color: rgb(9, 145, 9);
+    width: auto ;
+    height: 50px;
+    font-size: 80%;
+} */
+/* .clear{
+    clear: both;
+} */
+.wrapper .element{
+    width: 100%;
+    max-height: 150px;
+    overflow: auto;
+    float: right;
+}
+.row{
+    border: 1px solid red;
+    max-width: 100%;
+}
+/* .row::after{
+    content: '';
+    clear: both ;
+    display: block;
+} */
+.col{
+    width: 33.33%;
+    float: left;
+}
+.col-4{
+    border: 1px solid red;
+    text-align: center;
+}
+.element{
+    display: inline;
+}
+.list span{
+    display: list-item;
+    margin-left: 50%;
+    list-style-type: circle;
+}
+.good{
+    width: 600px;
+    border: 1px solid red;
+    margin: 0 auto;
+    /* height: 20px; */
+}
+.good .item{
+    display: inline-block;
+    width: 200px;
+    border: 1px solid green;
+    /* height: 20px; */
+}

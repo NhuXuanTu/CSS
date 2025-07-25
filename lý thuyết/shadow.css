@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.box{
+    background: green;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px 2px red;
+}
+/*
+box-shadow: h-offset v-offset blur spread color
+    h-offset: vị trí đổ bóng theo chiều ngang, số dương đổ bóng sang phải, âm sang trái
+    v-offset: vị trí đổ bóng theo chiều dọc, số dương đổ bóng xuống dưới , âm lên trên
+    blur: độ mờ của bóng
+    spread: kích thước của bóng (kích thước bóng nếu có spread sẽ bằng (h+spread,v+spread))
+    color: màu của bóng
+*/
+
+.item{
+    text-shadow: 3px 3px 3px red;
+}
+/*
+text-shadow: h-offset v-offset blur-radius color
+    h-offset: vị trí đổ bóng theo chiều ngang, số dương đổ bóng sang phải, âm sang trái
+    v-offset: vị trí đổ bóng theo chiều dọc, số dương đổ bóng xuống dưới , âm lên trên
+    blur-radius: độ mờ của bóng
+    color: màu của bóng
+    nếu( h=0,v=0) đổ bóng tất cả các hướng
+*/

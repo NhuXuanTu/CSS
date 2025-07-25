@@ -1,0 +1,24 @@
+/* Reset CSS start */
+*{
+    margin: 0;
+    padding: 0; 
+    border: 0;
+    font-size: 100%;
+    outline: none;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+body{
+    background-color: coral;
+    color: black;
+}
+/* Reset CSS end */
+
+.tu{
+    color: azure;
+    text-align: center;
+}
+
